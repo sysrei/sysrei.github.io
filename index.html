@@ -2,81 +2,110 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Restream Chat - App Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sysrei | Portfólio de Aplicativos Android</title>
+    <!-- Carrega o Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Define a cor de fundo primária e a fonte Inter */
         body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A; /* Fundo Ultra Dark */
         }
-
-        header {
-            background-color: #1f1f1f;
-            text-align: center;
-            padding: 40px 20px;
+        /* Customiza o gradiente do cabeçalho */
+        .header-bg {
+            background: linear-gradient(135deg, #1A1A1A 0%, #0D0D0D 100%);
+            border-bottom: 2px solid #00D8FF; /* Borda de destaque */
         }
-
-        header h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #00d8ff;
+        /* Estilo base para o botão de download */
+        .cta-button {
+            background-image: linear-gradient(90deg, #00D8FF 0%, #00B3CC 100%);
+            box-shadow: 0 4px 15px rgba(0, 216, 255, 0.4);
+            transition: all 0.3s ease;
         }
-
-        header p {
-            font-size: 1.2em;
-            color: #cccccc;
+        .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(0, 216, 255, 0.6);
+            transform: translateY(-2px);
         }
-
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #00d8ff;
-            color: #000000;
-            padding: 15px 30px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #00b3cc;
-        }
-
-        img.app-image {
-            max-width: 80%;
-            border-radius: 12px;
-            margin: 20px 0;
+        /* Estilo para a imagem do ícone */
+        .app-icon {
+            width: 96px; 
+            height: 96px; 
+            object-fit: cover;
         }
     </style>
 </head>
-<body>
+<body class="text-gray-100">
 
-<header>
-    <h1>Restream Chat</h1>
-    <p>O seu multi-chat para transmissões ao vivo!</p>
-</header>
+    <div class="min-h-screen flex flex-col">
+        <!-- HEADER / CABEÇALHO (Agora com foco na marca Sysrei) -->
+        <header class="header-bg text-center py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl sm:text-6xl font-extrabold mb-3 leading-tight">
+                    <span class="text-white">Sysrei</span> 
+                    <span class="text-[#00D8FF]">Apps</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-300 font-light mt-4">
+                    Soluções de Produtividade e Utilidade em Kotlin Nativo.
+                </p>
+            </div>
+        </header>
 
-<div class="content">
-    <p>Com o <strong>Restream Chat</strong>, você monitora chats de múltiplas plataformas ao mesmo tempo! Compatível com YouTube, Twitch e muito mais.</p>
+        <!-- CONTEÚDO PRINCIPAL: PORTFÓLIO DE APPS -->
+        <main class="flex-grow">
+            <div class="max-w-4xl mx-auto px-4 py-16 md:py-20">
 
-    <img src="capaMultiStreamYT.png" alt="Imagem do aplicativo Restream Chat" class="app-image">
+                <h2 class="text-3xl font-bold text-[#00D8FF] mb-12 text-center">
+                    Nossos Aplicativos
+                </h2>
+                
+                <!-- GRID DE APLICATIVOS (2 COLUNAS NO DESKTOP, 1 COLUNA NO MOBILE) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- CARD 1: RESTREAM CHAT -->
+                    <div class="bg-[#1f1f1f] p-6 rounded-xl shadow-2xl border border-gray-700 flex flex-col items-center text-center">
+                        <img src="capaMultiStreamYT.png" alt="Ícone do Restream Chat" class="app-icon rounded-2xl mb-4 shadow-lg border-2 border-gray-600">
+                        <h3 class="text-2xl font-bold text-white mb-2">Restream Chat</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">
+                            O seu multi-chat essencial para transmissões ao vivo. Monitore mensagens do YouTube, Twitch e mais, tudo em uma única janela otimizada. Desenvolvido para máxima produtividade do streamer.
+                        </p>
+                        <a href="https://play.google.com/store/apps/details?id=com.sysreigames.restreamchat&hl=pt-BR" class="cta-button text-gray-900 font-bold py-3 px-8 rounded-lg text-sm uppercase tracking-wider w-full" target="_blank">
+                            Baixar Restream Chat
+                        </a>
+                    </div>
 
-    <p>Ideal para streamers que querem simplicidade e eficiência no acompanhamento das mensagens do público. Sem complicações, direto ao ponto.</p>
+                    <!-- CARD 2: NO TAP SCREEN BLOCKER -->
+                    <div class="bg-[#1f1f1f] p-6 rounded-xl shadow-2xl border border-gray-700 flex flex-col items-center text-center">
+                        <img src="iconeNoTap.jpg" alt="Ícone do NoTap Screen Blocker" class="app-icon rounded-2xl mb-4 shadow-lg border-2 border-gray-600">
+                        <h3 class="text-2xl font-bold text-white mb-2">NoTap Screen Blocker</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">
+                            Ferramenta de acessibilidade para bloqueio de toque acidental, Volume e Botões de Hardware. Ideal para estabilizar o ecrã para usuários com desafios de controlo motor fino ou para evitar interrupções de crianças.
+                        </p>
+                        <a href="https://play.google.com/store/apps/details?id=com.sysreigames.notapscreenblocker&hl=pt-BR" class="cta-button text-gray-900 font-bold py-3 px-8 rounded-lg text-sm uppercase tracking-wider w-full" target="_blank">
+                            Baixar NoTap Screen Blocker
+                        </a>
+                    </div>
 
-    <a href="https://play.google.com/store/apps/details?id=com.sysreigames.restreamchat&hl=pt-BR" class="button" target="_blank">Baixar na Google Play</a>
-</div>
+                </div>
 
+            </div>
+        </main>
+
+        <!-- FOOTER / RODAPÉ -->
+        <footer class="bg-[#1f1f1f] text-center p-6 mt-10">
+            <p class="text-gray-500 text-sm">
+                Desenvolvido por Sysrei. &copy; 2025 Todos os direitos reservados.
+            </p>
+            <div class="mt-2">
+                <!-- Por favor, atualize estes links com os URLs reais (Política de Privacidade) -->
+                <a href="https://sysrei.github.io/privacy-policy.md" class="text-gray-400 hover:text-[#00D8FF] text-sm mx-2">
+                    Política de Privacidade
+                </a>
+                <a href="mailto:sysrei@gmail.com" class="text-gray-400 hover:text-[#00D8FF] text-sm mx-2">
+                    Contato
+                </a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
-
